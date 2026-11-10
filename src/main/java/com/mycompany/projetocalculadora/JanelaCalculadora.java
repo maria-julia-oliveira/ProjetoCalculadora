@@ -6,6 +6,11 @@ import javax.swing.ImageIcon;
 import java.awt.Color;
 import net.objecthunter.exp4j.Expression;
 import net.objecthunter.exp4j.ExpressionBuilder;
+import java.awt.event.KeyListener;
+import java.awt.event.KeyEvent;
+
+import javax.swing.Timer;
+import java.awt.event.ActionEvent;
 
 
 public class JanelaCalculadora extends javax.swing.JFrame {
@@ -19,7 +24,235 @@ public class JanelaCalculadora extends javax.swing.JFrame {
         Image imagemIcone = new ImageIcon(caminhoIcone).getImage();
         setIconImage(imagemIcone);
         setVisible(true);
+        
+       addKeyListener(new KeyListener(){
+            @Override
+            public void keyPressed(KeyEvent e){
+                Color corOriginal = btn9.getBackground();
+                char c = e.getKeyChar();
+                    if(e.getKeyCode() == KeyEvent.VK_NUMPAD9){
+                    System.out.println("Você apertou Q!");
+                    btn9.setBackground(Color.PINK);
+                    String txt = lblTela.getText();
+                    txt += "9";
+                    lblTela.setText(txt);
+                    Timer timer = new Timer(500, (ActionEvent evt) -> {
+                        btn9.setBackground(corOriginal);
+                    });
+                    timer.setRepeats(false);
+                    timer.start();
+                    
+                }else if(e.getKeyCode() == KeyEvent.VK_NUMPAD8){
+                    System.out.println("Você apertou 8!");
+                    btn8.setBackground(Color.PINK);
+                    String txt = lblTela.getText();
+                    txt += "8";
+                    lblTela.setText(txt);
+                    Timer timer = new Timer(500, (ActionEvent evt) -> {
+                        btn8.setBackground(corOriginal);
+                    });
+                    timer.setRepeats(false);
+                    timer.start();
+                    
+                }else if(e.getKeyCode() == KeyEvent.VK_NUMPAD7){
+                    System.out.println("Você apertou 7!");
+                    btn7.setBackground(Color.PINK);
+                    String txt = lblTela.getText();
+                    txt += "7";
+                    lblTela.setText(txt);
+                    Timer timer = new Timer(500, (ActionEvent evt) -> {
+                        btn7.setBackground(corOriginal);
+                    });
+                    timer.setRepeats(false);
+                    timer.start();
+                    
+                }else if(e.getKeyCode() == KeyEvent.VK_NUMPAD6){
+                    System.out.println("Você apertou 6!");
+                    btn6.setBackground(Color.PINK);
+                    String txt = lblTela.getText();
+                    txt += "6";
+                    lblTela.setText(txt);
+                    Timer timer = new Timer(500, (ActionEvent evt) -> {
+                        btn6.setBackground(corOriginal);
+                    });
+                    timer.setRepeats(false);
+                    timer.start();
+                   
+                }else if(e.getKeyCode() == KeyEvent.VK_NUMPAD5){
+                    System.out.println("Você apertou 5!");
+                    btn5.setBackground(Color.PINK);
+                    String txt = lblTela.getText();
+                    txt += "5";
+                    lblTela.setText(txt);
+                    Timer timer = new Timer(500, (ActionEvent evt) -> {
+                        btn5.setBackground(corOriginal);
+                    });
+                    timer.setRepeats(false);
+                    timer.start();
+                    
+                }else if(e.getKeyCode() == KeyEvent.VK_NUMPAD4){
+                    System.out.println("Você apertou 4!");
+                    btn4.setBackground(Color.PINK);
+                    String txt = lblTela.getText();
+                    txt += "4";
+                    lblTela.setText(txt);
+                    Timer timer = new Timer(500, (ActionEvent evt) -> {
+                        btn4.setBackground(corOriginal);
+                    });
+                    timer.setRepeats(false);
+                    timer.start();
+                    
+                }else if(e.getKeyCode() == KeyEvent.VK_NUMPAD3){
+                    System.out.println("Você apertou 3!");
+                    btn3.setBackground(Color.PINK);
+                    String txt = lblTela.getText();
+                    txt += "3";
+                    lblTela.setText(txt);
+                    Timer timer = new Timer(500, (ActionEvent evt) -> {
+                        btn3.setBackground(corOriginal);
+                    });
+                    timer.setRepeats(false);
+                    timer.start();
+                    
+                }else if(e.getKeyCode() == KeyEvent.VK_NUMPAD2){
+                    System.out.println("Você apertou 2!");
+                    btn2.setBackground(Color.PINK);
+                    String txt = lblTela.getText();
+                    txt += "2";
+                    lblTela.setText(txt);
+                    Timer timer = new Timer(500, (ActionEvent evt) -> {
+                        btn2.setBackground(corOriginal);
+                    });
+                    timer.setRepeats(false);
+                    timer.start();
+                    
+                }else if(e.getKeyCode() == KeyEvent.VK_NUMPAD1){
+                    System.out.println("Você apertou 1!");
+                    btn1.setBackground(Color.PINK);
+                    String txt = lblTela.getText();
+                    txt += "1";
+                    lblTela.setText(txt);
+                    Timer timer = new Timer(500, (ActionEvent evt) -> {
+                        btn1.setBackground(corOriginal);
+                    });
+                    timer.setRepeats(false);
+                    timer.start();
+                    
+                }else if(e.getKeyCode() == KeyEvent.VK_MULTIPLY){
+                    System.out.println("Você apertou *!");
+                    btnAsterisco.setBackground(Color.PINK);
+                    String txt = lblTela.getText();
+                    txt += "-";
+                    lblTela.setText(txt);
+                    Timer timer = new Timer(500, (ActionEvent evt) -> {
+                        btnAsterisco.setBackground(corOriginal);
+                    });
+                    timer.setRepeats(false);
+                    timer.start();
+                    
+                }else if(e.getKeyCode() == KeyEvent.VK_ADD){
+                    System.out.println("Você apertou +!");
+                    btnMais.setBackground(Color.PINK);
+                    String txt = lblTela.getText();
+                    txt += "+";
+                    lblTela.setText(txt);
+                    Timer timer = new Timer(500, (ActionEvent evt) -> {
+                        btnMais.setBackground(corOriginal);
+                    });
+                    timer.setRepeats(false);
+                    timer.start();
+                    
+                }else if(e.getKeyCode() == KeyEvent.VK_SUBTRACT){
+                    System.out.println("Você apertou -!");
+                    btnMenos.setBackground(Color.PINK);
+                    String txt = lblTela.getText();
+                    txt += "-";
+                    lblTela.setText(txt);
+                    Timer timer = new Timer(500, (ActionEvent evt) -> {
+                        btnMenos.setBackground(corOriginal);
+                    });
+                    timer.setRepeats(false);
+                    timer.start();
+                    
+                }else if(e.getKeyCode() == KeyEvent.VK_DECIMAL){
+                    System.out.println("Você apertou .!");
+                    btnPonto.setBackground(Color.PINK);
+                    String txt = lblTela.getText();
+                    txt += ".";
+                    lblTela.setText(txt);
+                    Timer timer = new Timer(500, (ActionEvent evt) -> {
+                        btnPonto.setBackground(corOriginal);
+                    });
+                    timer.setRepeats(false);
+                    timer.start();
+                    
+                }else if(e.getKeyCode() == KeyEvent.VK_DIVIDE){
+                    System.out.println("Você apertou ÷!");
+                    btnDivisao.setBackground(Color.PINK);
+                    String txt = lblTela.getText();
+                    txt += "/";
+                    lblTela.setText(txt);
+                    Timer timer = new Timer(500, (ActionEvent evt) -> {
+                        btnDivisao.setBackground(corOriginal);
+                    });
+                    timer.setRepeats(false);
+                    timer.start();
+                    
+                }else if(e.getKeyCode() == KeyEvent.VK_ENTER){
+                    System.out.println("Você apertou =!");
+                    btnIgual.setBackground(Color.PINK);
+                    String txt = lblTela.getText();
+                    txt += "=";
+                    lblTela.setText(txt);
+                    Timer timer = new Timer(500, (ActionEvent evt) -> {
+                        btnIgual.setBackground(corOriginal);
+                    });
+                    timer.setRepeats(false);
+                    timer.start();
+                    
+                     
+                }else if(c == '('){
+                    System.out.println("Você apertou (!");
+                    btnPareEsquerdo.setBackground(Color.PINK);
+                    String txt = lblTela.getText();
+                    txt += "(";
+                    lblTela.setText(txt);
+                    Timer timer = new Timer(500, (ActionEvent evt) -> {
+                        btnPareEsquerdo.setBackground(corOriginal);
+                    });
+                    timer.setRepeats(false);
+                    timer.start();
+                    
+                }else if(c == '('){
+                    System.out.println("Você apertou )!");
+                    btnPareDireito.setBackground(Color.PINK);
+                    String txt = lblTela.getText();
+                    txt += ")";
+                    lblTela.setText(txt);
+                    Timer timer = new Timer(500, (ActionEvent evt) -> {
+                        btnPareDireito.setBackground(corOriginal);
+                    });
+                    timer.setRepeats(false);
+                    timer.start();
+                    
+                }
+            
+            }
+            @Override
+            public void keyReleased(KeyEvent e){
+                
+            }
+            
+            @Override
+            public void keyTyped(KeyEvent e){
+                
+            }
+
+        });
+        setFocusable(true);
     }
+    
+
 
     /**
      * This method is called from within the constructor to initialize the form.
